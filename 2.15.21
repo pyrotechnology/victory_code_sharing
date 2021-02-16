@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>testing
+<html>
     <head>
         <meta charset="utf-8">
         <title>Combined</title>
         <style>
-        
+        /* garden*/
             table.table1, th, td {
             table-layout: fixed;
-            width: 100px;
-            line-height: 100px;
-            height: 100px;
+            width: 50px;
+            line-height: 50px;
+            height: 50px;
             border:1px solid black;
             border-collapse: collapse;
             z-index: 1;
+  			
     
         }
         th, td {
@@ -34,6 +35,7 @@
   border: 1px solid #d3d3d3;
   text-align: center;
 }
+/* info*/
 table.table2, th, td {
             border:1px solid black;
             border-collapse: collapse;
@@ -83,12 +85,13 @@ table.table2, th, td {
 </script>
 </head>
        <body>
-       <table class="table2" style="float:left;background-color:#84e866;width:500px;height:1000px"> 
+       <div style= "height:500px; width:520px; overflow-y:scroll">
+       <table class="table2" style="float:left;background-color:#84e866;width:500px;height:1000px;"> 
         <caption>Plants</caption>
             <tr><td><p style="font-size:1.5em">Slicer Tomatoes</p>
             <div id="pic" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
             
-             <div id="drag1"> <img id="drag1" src="https://www.kasandbox.org/programming-images/avatars/aqualine-seed.png" alt="tomato" draggable="true" ondragstart="drag(event)"> </div> 
+             <div id="drag"> <img id="drag" src="https://www.kasandbox.org/programming-images/avatars/aqualine-seed.png" width ="140px" height = "140px" alt="tomato" draggable="true" ondragstart="drag(event)"> </div> 
             <p style="font-size:1em"><em>Solanum lycopersicum</em></p>
                  <button type="button" class="collapsible">More Info</button>
 <div class="content">
@@ -140,10 +143,9 @@ table.table2, th, td {
 </div>
             </td></tr>
         </table>
-        
+      </div>  
       <br>
-       
-      <table class ="table1" id="myTable" style="float:right">
+      <table class ="table1" id="myTable" style="float:right; display:block; height: 100%; width: 100%; max-width: -moz-fit-content; max-width: fit-content; margin: 0 auto; overflow-x: auto; white-space: nowrap">
  <tr>
      
  </tr>
@@ -154,11 +156,9 @@ table.table2, th, td {
   <input type="length" id="length" placeholder="Length in Feet" name="length">
   <label for="width">Width:</label>
   <input type="width" id="width" placeholder="Width in Feet" name="width">
-  <button type="button" onclick="myFunction()">Try it</button>
+  <button type="button" onclick="myFunction()">Make my Garden</button>
 </form>
-<div id="drag">
-<img id="drag1" src="https://www.kasandbox.org/programming-images/avatars/aqualine-sapling.png" draggable="true" ondragstart="drag(event)"> 
-</div>
+
 
 
 
@@ -236,10 +236,20 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+//TO DO: 
+// - Make scrolls (table 1)
+// - Make fit to screen and adjustable pic sizes for drag and drop?
+// - Make copy for drag and drop
+// - Make garden table (1) regenerate, not add, when pressing button
+// - Running plant total
+// -print option
 
 </script>
 
     </body>
 </html>
+
+
+
 
    
